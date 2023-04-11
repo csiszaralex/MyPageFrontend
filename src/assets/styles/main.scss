@@ -1,12 +1,22 @@
 @import '~bootstrap/scss/functions';
 
 //: Custom variables
+$primary: shift-color(#fb8500, -10%);
+$secondary: #ffb703;
+// $color-mode-type: media-query;
+$body-bg: shift-color(#caf0f8, -55%);
+//success, danger, info, warning
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/variables-dark';
 
 //: Custom maps
 $custom-colors: ();
 $theme-colors: map-merge($theme-colors, $custom-colors);
+// @each $color, $value in $theme-colors {
+  // .btn-#{$color} {
+  //   background: linear-gradient(315deg, shift-color($value, -10%), shift-color($value, 20%));
+  // }
+// }
 @import '~bootstrap/scss/bootstrap';
 @include color-mode(dark) {
 }
