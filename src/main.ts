@@ -1,14 +1,16 @@
-import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-
+import { createApp } from 'vue';
 import App from './App.vue';
+import './assets/styles/main.scss';
+import './config/fontawesome.config';
 import router from './router';
 
-import './assets/styles/main.scss';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const app = createApp(App);
-
 app.use(createPinia());
 app.use(router);
+
+app.component('FaIcon', FontAwesomeIcon);
 
 app.mount('#app');
