@@ -12,5 +12,6 @@ app.use(createPinia());
 app.use(router);
 
 app.component('FaIcon', FontAwesomeIcon);
+app.component('BaseButton', () => import('./components/UI/BaseButton.vue'));
 
 app.mount('#app');
