@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/functions';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 //: Custom variables
 $primary: shift-color(#fb8500, -10%);
@@ -22,7 +23,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 //: Own styles
-h1 {
+.fira {
+  font-family: 'Fira Code', monospace;
   // color: shift-color($own, 50%);
   // color: color-contrast(#fff);
 }
