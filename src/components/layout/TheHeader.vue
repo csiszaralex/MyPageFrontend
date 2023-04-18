@@ -4,7 +4,7 @@ import BaseButton from '@/components/UI/BaseButton.vue';
 
 <template>
   <nav class="navbar navbar-expand-md">
-    <div class="container-fluid">
+    <div class="container-fluid d-grid">
       <div class="navbar-toggler order-2">
         <FaIcon
           :icon="['far', 'compass']"
@@ -21,8 +21,8 @@ import BaseButton from '@/components/UI/BaseButton.vue';
           data-bs-target="#navbar"
         />
       </div>
-      <div class="collapse navbar-collapse ms-3 order-md-1 order-4" id="navbar">
-        <ul class="navbar-nav mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse order-md-1 order-4" id="navbar">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active" href="#">Home</a>
           </li>
@@ -46,8 +46,8 @@ import BaseButton from '@/components/UI/BaseButton.vue';
         </ul>
       </div>
 
-      <div class="fira fs-4 fw-semibold navbar-brand order-2">Test</div>
-      <div class="order-3">
+      <div class="fira fs-4 fw-semibold order-2 text-center">Alex</div>
+      <div class="order-3 text-end">
         <base-button type="primary" :icon="['fas', 'file-signature']">ContactMe!</base-button>
       </div>
     </div>
@@ -55,8 +55,8 @@ import BaseButton from '@/components/UI/BaseButton.vue';
 </template>
 
 <style lang="scss" scoped>
-.navbar-collapse {
-  flex-grow: 0;
+.d-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 .navbar-toggler {
   border: none;
